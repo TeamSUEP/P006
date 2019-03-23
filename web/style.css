@@ -1,0 +1,40 @@
+.container.demo{
+    /*width: 317vh;*/
+    width: 317vm;
+    /*height: 80vh;*/
+    /*vw和vh是相对于视口（viewport，也可以叫做视区、视界或可视范围）的宽度和高度。*/
+}
+
+.row{
+
+    border-top: 6vh solid white;
+    height: 100%;
+}
+
+.btn{
+    width: 43vh;
+    height: 6vh;
+    font-weight: bold;
+    font-size: 3vh;
+}
+/*.infor{*/
+    /*padding-left: 20px;*/
+/*}*/
+/*.container.demo .row{*/
+    /*background: yellowgreen;*/
+    /*border-bottom: 1px solid deeppink;*/
+    /*height: 30vh;*/
+/*}*/
+
+/*.container.demo .row > div > span {*/
+    /*display: block;*/
+    /*background: #487bdd;*/
+    /*color: white;*/
+    /*font-size: 32px;*/
+    /*padding: 8px;*/
+    /*border:1px solid #021d51;*/
+/*}*/
+
+/*.component.demo{*/
+    /*padding: 50px;*/
+/*}*/

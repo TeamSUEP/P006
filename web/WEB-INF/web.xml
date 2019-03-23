@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://java.sun.com/xml/ns/javaee"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
+		  http://java.sun.com/xml/ns/javaee/web-app_4_0.xsd"
+           version="3.0">
+    <display-name>P006</display-name>
+    <welcome-file-list>
+        <welcome-file>login.jsp</welcome-file>
+        <welcome-file>student/information.jsp</welcome-file>
+    </welcome-file-list>
+    <jsp-config>
+        <taglib>
+            <taglib-uri>http://java.sun.com/jsp/jstl/core</taglib-uri>
+            <taglib-location>/WEB-INF/c.tld</taglib-location>
+        </taglib>
+    </jsp-config>
+
+    <filter>
+        <filter-name>verificationFilter</filter-name>
+        <filter-class>com.company.ljz.verificationFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>verificationFilter</filter-name>
+        <url-pattern>/admin/*</url-pattern>
+        <url-pattern>/student/*</url-pattern>
+        <url-pattern>/teacher/*</url-pattern>
+    </filter-mapping>
+
+    <filter>
+        <filter-name>SetCharacterEncodingFilter</filter-name>
+        <filter-class>com.company.ljz.SetCharacterEncodingFilter</filter-class>
+        <init-param>
+            <param-name>encoding</param-name>
+            <param-value>utf-8</param-value>
+        </init-param>
+    </filter>
+    <filter-mapping>
+        <filter-name>SetCharacterEncodingFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+
+    <servlet>
+    <servlet-name>LoginServlet</servlet-name>
+    <servlet-class>com.company.ljz.LoginServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>LoginServlet</servlet-name>
+        <url-pattern>/LoginServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>PasswdRepairServlet</servlet-name>
+        <servlet-class>com.company.ljz.PasswdRepairServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>PasswdRepairServlet</servlet-name>
+        <url-pattern>/PasswdRepairServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ExperimentServlet</servlet-name>
+        <servlet-class>com.company.ljz.ExperimentServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ExperimentServlet</servlet-name>
+        <url-pattern>/ExperimentServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>jumpServlet</servlet-name>
+        <servlet-class>com.company.ljz.jumpServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>jumpServlet</servlet-name>
+        <url-pattern>/jumpServlet</url-pattern>
+    </servlet-mapping>
+
+<servlet>
+        <servlet-name>UploadServlet</servlet-name>
+        <servlet-class>com.company.ljz.UploadServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>UploadServlet</servlet-name>
+        <url-pattern>/UploadServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>DownloadServlet</servlet-name>
+        <servlet-class>com.company.ljz.DownloadServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>DownloadServlet</servlet-name>
+        <url-pattern>/DownloadServlet</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet>
+        <servlet-name>Admin_InforServlet</servlet-name>
+        <servlet-class>com.company.ljz.Admin_InforServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Admin_InforServlet</servlet-name>
+        <url-pattern>/Admin_InforServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>Admin_AdduserServlet</servlet-name>
+        <servlet-class>com.company.ljz.Admin_AdduserServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Admin_AdduserServlet</servlet-name>
+        <url-pattern>/Admin_AdduserServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>courseServlet</servlet-name>
+        <servlet-class>com.company.ljz.courseServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>courseServlet</servlet-name>
+        <url-pattern>/courseServlet</url-pattern>
+    </servlet-mapping>
+</web-app>
