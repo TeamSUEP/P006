@@ -22,7 +22,7 @@
     <div class="col-sm-1 col-lg-4">
       <form action="LoginServlet" method="post" role="form">
         <br>
-        <h3 class="text-center">上海电力学院</h3>
+        <h3 class="text-center">上海电力大学</h3>
         <h3 class="text-center">计算机学院实验管理系统</h3>
         <br>
         <div>
